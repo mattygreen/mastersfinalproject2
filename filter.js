@@ -20,7 +20,7 @@ let jsonData = null;
 
 
 //this line of code defines the size of the difference between the timeline boxes on dates. For example, the higher the pixel per day the greater difference there will be in time// 
-const  pixelPerDay= 0.5; 
+const  pixelPerDay= 0.2; 
         
 function timelineDifference(array) {
     if (array.dateDifference !== 0 && array.dateDifference != null) {
@@ -531,11 +531,6 @@ spaceforentries=boxsize+reasonablegapbetweenthem
 Do we want the entries to change because that will then change the formula?
 
 */
-
-
-
-// this section creates the event listeners for the slider, search bar and date range// 
-
 
 
 

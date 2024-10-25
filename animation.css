@@ -1,3 +1,6 @@
+/* I put this in a separate css file as when i did it interferred with FILTER. JS*/ 
+
+
 .timelinebox {
     transform: translateX(-100%); 
     opacity: 0; 

@@ -82,7 +82,7 @@ fetch('https://raw.githubusercontent.com/mattygreen/jsonData/main/datanewDate.js
         createTimeLineStructure(filteredNewData);
         createBootstrapCarousel(filteredNewData);
 
-        // once the modal boxes and boostrap carousels have been created, now add the intersection observers onto the entries. The code for this was influenced by this Tutorial // 
+        // once the modal boxes and boostrap carousels have been created, now add the intersection observers onto the entries. The code for this was influenced by this Tutorial https://www.youtube.com/watch?v=2IbRtjez6ag // 
         let timelineboxselectorAnimate = document.querySelectorAll('.timelinebox');
 
         const observer = new IntersectionObserver(entries => {
@@ -162,6 +162,8 @@ function closeModal() {
 }
 
 
+
+// this code was partly influenced by this tutorial which shows how to manipulate the DOM with Javascript https://agirlcodes.medium.com/build-a-crud-todo-app-with-vanilla-javascript-and-fetch-api-44a664c0de52 creating dynamic apps// 
 
 function createTimeLineStructure(data) {
     const listContainer = document.getElementById('listContainer');

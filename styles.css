@@ -54,7 +54,7 @@ body {
     
 }
 
-/* Centering the container */
+/* Centering the container, which will be the timeline */
 #listContainerWrapper {
     display: flex;
     justify-content: center;
@@ -64,12 +64,12 @@ body {
 
 /* Style the unordered list to remove default padding and margin, and use flexbox */
 #listContainer {
-    list-style-type: none; /* Remove default bullets */
+    list-style-type: none; 
     padding: 0;
     margin: 0;
     display: grid;
     grid-template-columns: repeat(1, auto);
-    gap: 20px; /* Gap between list items */
+    gap: 20px; 
     background-color: black; 
     Border-left: 15px white solid; 
     padding-left:5vw; 
@@ -78,6 +78,7 @@ body {
 
 }
 
+/* creates the timeline box within our distinctive style*/ 
 
 .timelinebox {
     list-style:none; 
@@ -108,7 +109,7 @@ body {
 
 }
 
-
+/* the styles of this came from the W3 Schools Modal elements */ 
 .mymodal {
     display: none;
     position: fixed;
@@ -123,7 +124,7 @@ body {
 }
 /* When the modal is active (open) */
 .mymodal.active {
-    display: flex; 
+    display: block; 
     justify-content: center;
     align-items: center;
 }
@@ -133,8 +134,10 @@ body {
     background-color: #fefefe;
     padding: 40px;
     border: 1px solid #888;
+    min-width: 70vw; 
     max-width: 90vw;
-    max-height: 90vh;
+    min-height: 70vh;
+    max-height: 90vh;  
     overflow: auto;
     position: relative;
     align-items: center;
@@ -216,6 +219,8 @@ body {
 }
 
 
+/* adds the styles for the reverse button which sits above the rest of the page*/ 
+
 .reversebutton { 
     position: fixed; 
     bottom: 0; 
@@ -227,6 +232,7 @@ body {
 }
 
 
+/* increases the size when hovers*/ 
 
 .reversebutton:hover { 
     scale:calc(1.3);
@@ -241,7 +247,7 @@ body {
     height: 100px; 
     width:100px; 
     border: 3px, white, solid; 
-    color: turquoise; 
+    color: black; 
     transform: translateX(-300px); 
     border-radius:10px; 
     background-color: white;
@@ -316,6 +322,8 @@ body {
     
     }
 
+
+ /* adapts the styles for when they are viewed in a smaller device */ 
     .timelinebox {
         list-style:none; 
         width: 200px; 
@@ -332,6 +340,8 @@ body {
         align-items: center;
         justify-content: center;
     }
+
+    /* moves the time label back into the centre */ 
     .timeLabel { 
             transform: none;
             margin-left:15px; 
@@ -352,6 +362,12 @@ body {
         padding:60px; 
     
     }
+
+    .columndiv {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
 }
 
 
@@ -403,6 +419,7 @@ body {
     }
 
 
+    /* creates custom styles for the Boostrap carousel*/ 
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -413,12 +430,13 @@ body {
     display: inline-block;
 }
 
+
 .carousel-control-prev-icon {
-    transform: rotate(135deg); /* Make it point left */
+    transform: rotate(135deg); 
 }
 
 .carousel-control-next-icon {
-    transform: rotate(-45deg); /* Make it point right */
+    transform: rotate(-45deg); 
 }
 
 .centredArrow {
@@ -432,6 +450,8 @@ body {
   
 }
 
+
+/* styles the custom styles for the filter*/ 
 
 #filterControls { 
     background: white;

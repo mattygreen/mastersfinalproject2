@@ -1,10 +1,13 @@
+
+// code for fixed radio and changes https://www.freecodecamp.org/news/svg-javascript-tutorial/ i followed this tutorial. However, my SVG was appearing a string, which means i needed to  extract from a string an then put back in rather than simply just setting the transform element https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match this was used to explore the STRING matching// 
+
 let arrowLeft = document.getElementById('arrowleft'); 
 arrowLeft.addEventListener('click', moveLeft)
 
 let arrowRight =document.getElementById('arrowright'); 
 arrowRight.addEventListener('click', moveRight)
 const translatePattern = /translate\(\s*(-?\d+\.?\d*)\s*,\s*(-?\d+\.?\d*)\s*\)/;
-const step = 100; // Step size for moving
+const step = 100; // increase or decrease if u want the change be greater or smaller 
 function moveLeft() {
     console.log('Moving left step clicks');
     adjustTranslation(-step);
@@ -19,15 +22,15 @@ function adjustTranslation(StepInput) {
 const element = document.getElementById('movingTool2');
 
 let transform = element.getAttribute('transform');
-console.log(typeof(transform)); 
+    console.log(typeof(transform)); 
     console.log('Current transform:', transform);
 
-
+// This REGREX expression used CHATGPT to generate// 
     const translatePattern = /translate\(\s*(-?\d+\.?\d*)\s*,\s*(-?\d+\.?\d*)\s*\)/;
     let translateMatch = transform.match(translatePattern);
 
     if (!translateMatch) {
-        console.error('No valid translate function found in the transform attribute. Adding one.');
+        console.error('No valid translate function found in the transform attribute. Reminder to check code.');
     
         transform += ` translate(${StepInput}, 0)`;
         console.log('Updated transform:', transform);
@@ -38,7 +41,6 @@ console.log(typeof(transform));
     let x = parseFloat(translateMatch[1]);
     let y = parseFloat(translateMatch[2]);
 
-    console.log('Current X:', x, 'Current Y:', y)
     x += StepInput;
     const newTransform = transform.replace(translatePattern, `translate(${x}, ${y})`);
     console.log('New transform:', newTransform);
