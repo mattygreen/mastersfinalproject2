@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education Timeline</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="animation.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <section class="intro">
+    <div class="introtitle">
+      <h1> Education 
+      </h1>
+    </div>
+    <div class="IntroductionText">
+      <p> Our research into news stories about education in relation to Black British communities, of African and Caribbean backgrounds in particular, revealed two key findings: first, there is a flurry of news reports on this topic concentrated in the period from the 1970s to the 1980s. This is perhaps unsurprising as by that time there are many more second-generation Black British children who are part of the UK’s education system.  
+
+        Our second finding relates to the language used to refer to these children who most of them knew Britain as their only home country. This collection covers news stories that are mostly about education reports and statistics compiled by state and establishment authorities. A glaring absence from all these news reports is any reference to the African-Caribbean Educational Resource project (ACER) founded by Len Garrison in 1977 to create educational materials that reflected the African and Caribbean heritage of pupils in UK’s schools. ACER is part of the history of Black Cultural Archives (BCA) and here is a blog piece by the Young Historians Project on finding ACER resources in the BCA. 
+        
+        As you read through the news scripts, bear in mind that the headings or “cue titles” for each news story are given by the BBC’s editorial team. How revealing are those headings of the BBC’s understanding and interpretation of the news they cover?   </p>
+    </div>
+  </section>
+  <section class="mainsection">
+    <div id="listContainerWrapper">
+      <ul id="listContainer"></ul>
+    </div>
+
+    <div id="modalsContainer"></div>
+
+    <div class="centredArrow" id="downArrow"> &darr;</div>
+
+    <div class="reversebutton" id="reverseButton1">
+      <svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.47 21.5" role="button"
+        aria-label="navigates back to the home page">
+        <defs>
+          <style>
+            .cls-1 {
+              fill: turquoise;
+              stroke: turquoise;
+              stroke-miterlimit: 10;
+            }
+          </style>
+        </defs>
+        <g id="Layer_1-2" data-name="Layer_1">
+          <g>
+            <rect class="cls-1" x=".5" y="17.12" width="20.47" height="3.88" rx="1.94" ry="1.94" />
+            <rect class="cls-1" x="12.02" y="11.63" width="15.03" height="2.87" rx="1.44" ry="1.44"
+              transform="translate(6.47 32.61) rotate(-90)" />
+            <rect class="cls-1" x="7.69" y="5.55" width="12.64" height="2.87" rx="1.44" ry="1.44"
+              transform="translate(28.01 13.98) rotate(-180)" />
+            <rect class="cls-1" x="6.74" y="8.6" width="8" height="1.66" rx=".83" ry=".83"
+              transform="translate(11.15 23.72) rotate(-132.97)" />
+            <rect class="cls-1" x="6.17" y="3.24" width="8" height="1.66" rx=".83" ry=".83"
+              transform="translate(18.79 -2.7) rotate(120)" />
+          </g>
+        </g>
+      </svg>
+    </div>
+  </section>
+  <!-- creating templates to create structure of the code, so that it's easier to change, rather than having to edit the Javascript. I have created these for the timeline Boxes and the modals-->
+  <template data-timeLine-template>
+    <li class="timelinebox">
+      <div class="timelineTitle">
+        <div iconsection>
+        </div>
+      </div>
+    </li>
+  </template>
+
+
+  <template data-modal-template>
+    <div data-modalbox class="mymodal">
+      <div class="modalcontent">
+        <div class="titleForModal"></div>
+        <div class="columndiv">
+          <div class="column carousel-column">
+            <div data-carousel-container></div>
+          </div>
+          <div data-modal-body class="column content-column"></div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script src="education.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>

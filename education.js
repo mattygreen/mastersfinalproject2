@@ -44,7 +44,7 @@ fetch('https://raw.githubusercontent.com/mattygreen/jsonData/main/datanewDate.js
         console.log(newData); 
 
         // this section filters so that it only the data from the site// 
-        const filteredNewData = newData.filter(item => item.theme === 'anti-racism' || item.theme === 'labels')
+        const filteredNewData = newData.filter(item => item.theme === 'education' || item.theme === 'labels')
         console.log(filteredNewData); 
         /*the next lines of code workout a formula to create the difference between the timeline elements to show progression of time
         let firstElement = newData[0]; 
